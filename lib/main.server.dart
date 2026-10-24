@@ -12,35 +12,15 @@ import 'constants/site.dart';
 // This file is generated automatically by Jaspr, do not remove or edit.
 import 'main.server.options.dart';
 
-const _title = 'Scoreboard – Riconoscimento sul lavoro';
-
-const _description =
-    'Scoreboard è l’app desktop per il riconoscimento sul lavoro: achievement verificati '
-    'dall’azienda e riconoscimenti tra colleghi, con XP, livelli e classifiche.';
-
 void main() {
   Jaspr.initializeApp(options: defaultServerOptions);
 
   runApp(
     Document(
-      title: _title,
-      lang: 'it',
+      // Title, language and per-language tags are set by each page.
       base: Site.basePath,
-      meta: {
-        'description': _description,
-        'theme-color': '#111214',
-        'twitter:card': 'summary_large_image',
-      },
+      meta: {'theme-color': '#111214', 'twitter:card': 'summary_large_image'},
       head: [
-        // Open Graph uses `property`, not `name`; LinkedIn reads only that.
-        for (final (property, content) in const [
-          ('og:title', _title),
-          ('og:description', _description),
-          ('og:type', 'website'),
-          ('og:url', '${Site.url}/'),
-          ('og:image', '${Site.url}/images/social-preview.jpg'),
-        ])
-          meta(attributes: {'property': property}, content: content),
         link(rel: 'icon', href: 'favicon.svg', type: 'image/svg+xml'),
         link(rel: 'preconnect', href: 'https://fonts.googleapis.com'),
         link(

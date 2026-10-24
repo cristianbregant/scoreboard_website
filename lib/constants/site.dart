@@ -1,4 +1,4 @@
-/// Contacts and links shown on the site. Change them before publishing.
+/// Contacts and links shown on the site.
 abstract final class Site {
   static const String name = 'Scoreboard';
 
@@ -17,9 +17,7 @@ abstract final class Site {
   /// Where demo requests go.
   static const String contactEmail = 'cristian.bregant94@gmail.com';
 
-  static const String demoMailto =
-      'mailto:$contactEmail?subject=Richiesta%20demo%20Scoreboard';
+  static String demoMailto(String subject) => 'mailto:$contactEmail?subject=${Uri.encodeComponent(subject)}';
 
-  static const String releasesUrl =
-      'https://github.com/cristianbregant/scoreboard/releases';
+  static const String releasesUrl = 'https://github.com/cristianbregant/scoreboard/releases';
 }

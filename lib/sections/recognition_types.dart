@@ -3,6 +3,7 @@ import 'package:jaspr/jaspr.dart';
 
 import '../components/icon.dart';
 import '../components/section_title.dart';
+import '../l10n/l10n.dart';
 
 /// Verified achievements versus base (peer) achievements.
 class RecognitionTypes extends StatelessComponent {
@@ -10,39 +11,24 @@ class RecognitionTypes extends StatelessComponent {
 
   @override
   Component build(BuildContext context) {
-    return section(id: 'riconoscimenti', classes: 'section', [
+    final strings = context.strings;
+    return section(id: 'recognition', classes: 'section', [
       div(classes: 'container', [
-        const SectionTitle(
-          eyebrow: 'Due tipi di riconoscimento',
-          title: 'Il valore ufficiale dell’azienda, il calore dei colleghi',
-          lead:
-              'Ogni achievement è una carta da collezione: si inclina sotto il cursore e si gira '
-              'per mostrare chi l’ha assegnata.',
-        ),
+        SectionTitle(eyebrow: strings.typesEyebrow, title: strings.typesTitle, lead: strings.typesLead),
         div(classes: 'type-grid', [
           _TypeCard(
             variant: 'verified',
             icon: AppIcon.verified,
-            title: 'Achievement verificati',
-            subtitle: 'Assegnati solo dall’azienda',
-            points: const [
-              'Fino a 150 XP, in quattro livelli: Bronze, Silver, Gold e Platinum.',
-              'Il retro della carta mostra il logo dell’azienda, come un certificato.',
-              'Si scaricano come PDF e come credenziale Open Badges 3.0.',
-              'Si aggiungono al profilo LinkedIn tra le certificazioni.',
-            ],
+            title: strings.verifiedTitle,
+            subtitle: strings.verifiedSubtitle,
+            points: strings.verifiedPoints,
           ),
           _TypeCard(
             variant: 'peer',
             icon: AppIcon.heart,
-            title: 'Achievement base',
-            subtitle: 'Inviati tra colleghi',
-            points: const [
-              'Chiunque li crea, con nome, descrizione, icona e valore: 10, 25 o 50 XP.',
-              'Si inviano a un collega con un messaggio facoltativo.',
-              'Massimo 5 al mese a testa: restano un gesto che conta, non spam.',
-              'Una libreria condivisa da cui tutto il team può attingere.',
-            ],
+            title: strings.peerTitle,
+            subtitle: strings.peerSubtitle,
+            points: strings.peerPoints,
           ),
         ]),
       ]),

@@ -4,42 +4,36 @@ import 'package:jaspr/jaspr.dart';
 import '../components/icon.dart';
 import '../components/screenshot.dart';
 import '../constants/site.dart';
+import '../l10n/l10n.dart';
 
 class Hero extends StatelessComponent {
   const Hero({super.key});
 
   @override
   Component build(BuildContext context) {
+    final strings = context.strings;
     return section(id: 'top', classes: 'hero', [
       div(classes: 'container', [
         div(classes: 'hero-copy', [
-          span(classes: 'pill', [const Icon(AppIcon.sparkles, size: 14), .text('Riconoscimento sul lavoro')]),
+          span(classes: 'pill', [const Icon(AppIcon.sparkles, size: 14), .text(strings.heroPill)]),
           h1([
-            .text('Ogni traguardo del tuo team, '),
-            span(classes: 'accent', [.text('da collezionare')]),
-            .text('.'),
+            .text(strings.heroTitleStart),
+            span(classes: 'accent', [.text(strings.heroTitleAccent)]),
+            .text(strings.heroTitleEnd),
           ]),
-          p(classes: 'lead', [
-            .text(
-              'Scoreboard trasforma i successi delle persone in achievement verificati dall’azienda '
-              'e in riconoscimenti tra colleghi. Tutto diventa XP, livelli e classifiche, '
-              'in un’app desktop che il team apre volentieri.',
-            ),
-          ]),
+          p(classes: 'lead', [.text(strings.heroLead)]),
           div(classes: 'hero-actions', [
-            a(href: Site.demoMailto, classes: 'button', [.text('Richiedi una demo'), const Icon(AppIcon.arrowRight, size: 18)]),
-            a(href: '#funzionalita', classes: 'button button-ghost', [.text('Scopri le funzionalità')]),
+            a(href: Site.demoMailto(strings.demoSubject), classes: 'button', [
+              .text(strings.requestDemo),
+              const Icon(AppIcon.arrowRight, size: 18),
+            ]),
+            a(href: context.anchor('features'), classes: 'button button-ghost', [.text(strings.heroSecondaryCta)]),
           ]),
           ul(classes: 'hero-points', [
-            for (final point in const ['macOS, Windows e Linux', 'In 5 lingue', 'Pronto per le richieste GDPR'])
-              li([const Icon(AppIcon.check, size: 16), .text(point)]),
+            for (final point in strings.heroPoints) li([const Icon(AppIcon.check, size: 16), .text(point)]),
           ]),
         ]),
-        const Screenshot(
-          'achievements',
-          alt: 'La schermata degli achievement: carte collezionabili con XP, livello e badge verificati',
-          eager: true,
-        ),
+        Screenshot('achievements', alt: strings.heroImageAlt, eager: true),
       ]),
     ]);
   }

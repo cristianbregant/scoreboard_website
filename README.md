@@ -1,6 +1,21 @@
 # Scoreboard website
 
-The public landing page of [Scoreboard](../scoreboard), for prospective customers. It is written in Italian and built with [Jaspr](https://jaspr.site) in static mode: the build is plain HTML and CSS, with no JavaScript, and can be hosted anywhere (GitHub Pages, Netlify, Cloudflare Pages, an S3 bucket…).
+The public landing page of [Scoreboard](../scoreboard), for prospective customers. It is built with [Jaspr](https://jaspr.site) in static mode: the build is plain HTML and CSS, with no JavaScript, and can be hosted anywhere (GitHub Pages, Netlify, Cloudflare Pages, an S3 bucket…).
+
+## Languages
+
+| Language | Path |
+|---|---|
+| Italian (main) | `/` |
+| English | `/en/` |
+| French | `/fr/` |
+| German | `/de/` |
+
+Each language is its own pre-rendered page, with `lang`, title, description and Open Graph tags in that language, plus `hreflang` links to the others so search engines serve the right one. The header has a language menu (a `<details>` element, so it needs no JavaScript), and the footer lists every language.
+
+The texts live in [lib/l10n](lib/l10n): [strings.dart](lib/l10n/strings.dart) declares every text, and each `strings_<code>.dart` fills them in. Some lists line up with lists of icons or screenshots in the sections (`Features.icons`, `Console.icons`, `Quality.icons`, `Gallery.screens`), so keep the same order and length.
+
+To add a language, create `strings_<code>.dart` and add it to `SiteLocale` in [lib/l10n/l10n.dart](lib/l10n/l10n.dart). The route and the menu entry follow from there.
 
 ## Development
 
@@ -30,8 +45,10 @@ jaspr build --dart-define=SITE_URL=https://example.com
 
 ```
 lib/
-├── main.server.dart   the document: title, meta tags, fonts, stylesheet
-├── app.dart           the page, section by section
+├── main.server.dart   the document: base path, fonts, stylesheet
+├── app.dart           one route per language
+├── pages/             the landing page, with its per-language head tags
+├── l10n/              languages and texts
 ├── sections/          hero, recognition types, features, console, gallery, steps, quality, FAQ, call to action
 ├── components/        header, footer, section titles, screenshots, icons
 └── constants/site.dart

@@ -3,39 +3,25 @@ import 'package:jaspr/jaspr.dart';
 
 import '../components/icon.dart';
 import '../components/section_title.dart';
+import '../l10n/l10n.dart';
 
 /// Platforms, languages, accessibility and data handling.
 class Quality extends StatelessComponent {
   const Quality({super.key});
 
-  static const _items = [
-    (
-      AppIcon.monitor,
-      'Nativa sul desktop',
-      'macOS, Windows e Linux, con icona nella barra dei menu, scorciatoie da tastiera e aggiornamenti automatici.',
-    ),
-    (AppIcon.globe, 'In 5 lingue', 'Italiano, inglese, spagnolo, francese e tedesco, con temi chiaro e scuro.'),
-    (
-      AppIcon.accessibility,
-      'Accessibile',
-      'Uso completo da tastiera, supporto a VoiceOver, Narrator e Orca, contrasto WCAG AA e animazioni ridotte.',
-    ),
-    (
-      AppIcon.shield,
-      'Dati sotto controllo',
-      'Export dei dati di una persona in JSON, registro di ogni azione amministrativa e classifiche pubbliche facoltative.',
-    ),
-  ];
+  /// One per entry of `Strings.qualityItems`.
+  static const icons = [AppIcon.monitor, AppIcon.globe, AppIcon.accessibility, AppIcon.shield];
 
   @override
   Component build(BuildContext context) {
+    final strings = context.strings;
     return section(classes: 'section section-alt', [
       div(classes: 'container', [
-        const SectionTitle(eyebrow: 'Fatta con cura', title: 'Pronta per tutto il team, non solo per qualcuno'),
+        SectionTitle(eyebrow: strings.qualityEyebrow, title: strings.qualityTitle),
         div(classes: 'quality-grid', [
-          for (final (icon, title, text) in _items)
+          for (final (i, (title, text)) in strings.qualityItems.indexed)
             div(classes: 'quality-item', [
-              span(classes: 'icon-tile', [Icon(icon)]),
+              span(classes: 'icon-tile', [Icon(icons[i])]),
               h3([.text(title)]),
               p(classes: 'muted', [.text(text)]),
             ]),

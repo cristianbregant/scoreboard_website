@@ -3,26 +3,23 @@ import 'package:jaspr/jaspr.dart';
 
 import '../components/screenshot.dart';
 import '../components/section_title.dart';
+import '../l10n/l10n.dart';
 
 class Gallery extends StatelessComponent {
   const Gallery({super.key});
 
-  static const _shots = [
-    ('feed', 'Il feed aziendale con reazioni e commenti'),
-    ('achievement-detail', 'Il dettaglio di un achievement verificato'),
-    ('your-company', 'La pagina dell’azienda, con catalogo e classifica'),
-    ('profile', 'Il profilo, con livello e achievement recenti'),
-    ('base-achievements', 'La libreria degli achievement base'),
-    ('notifications', 'Il centro notifiche'),
-  ];
+  /// One per entry of `Strings.galleryCaptions`.
+  static const screens = ['feed', 'achievement-detail', 'your-company', 'profile', 'base-achievements', 'notifications'];
 
   @override
   Component build(BuildContext context) {
+    final strings = context.strings;
     return section(classes: 'section section-alt', [
       div(classes: 'container', [
-        const SectionTitle(eyebrow: 'Dentro l’app', title: 'Pensata per essere aperta ogni giorno'),
+        SectionTitle(eyebrow: strings.galleryEyebrow, title: strings.galleryTitle),
         div(classes: 'gallery', [
-          for (final (name, caption) in _shots) Screenshot(name, alt: caption, caption: caption),
+          for (final (i, caption) in strings.galleryCaptions.indexed)
+            Screenshot(screens[i], alt: caption, caption: caption),
         ]),
       ]),
     ]);
