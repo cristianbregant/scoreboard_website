@@ -15,7 +15,7 @@ abstract final class Site {
   }
 
   /// Where demo requests go.
-  static const String contactEmail = 'hello@scoreboard.example';
+  static const String contactEmail = 'cristian.bregant94@gmail.com';
 
   static const String demoMailto =
       'mailto:$contactEmail?subject=Richiesta%20demo%20Scoreboard';
