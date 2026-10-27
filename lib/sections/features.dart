@@ -28,9 +28,8 @@ class Features extends StatelessComponent {
         SectionTitle(eyebrow: strings.featuresEyebrow, title: strings.featuresTitle),
         div(classes: 'feature-grid', [
           for (final (i, (title, text)) in strings.features.indexed)
-            article(classes: 'feature-card', [
-              span(classes: 'icon-tile', [Icon(icons[i])]),
-              h3([.text(title)]),
+            article(classes: 'feature', [
+              h3([Icon(icons[i], size: 18), .text(title)]),
               p(classes: 'muted', [.text(text)]),
             ]),
         ]),

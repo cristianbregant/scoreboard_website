@@ -35,7 +35,7 @@ class Console extends StatelessComponent {
           ul(classes: 'console-list', [
             for (final (i, (title, text)) in strings.consoleItems.indexed)
               li([
-                span(classes: 'icon-tile small', [Icon(icons[i], size: 18)]),
+                span(classes: 'list-icon', [Icon(icons[i], size: 18)]),
                 div([
                   strong([.text(title)]),
                   p(classes: 'muted', [.text(text)]),

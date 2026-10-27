@@ -15,7 +15,7 @@ class Hero extends StatelessComponent {
     return section(id: 'top', classes: 'hero', [
       div(classes: 'container', [
         div(classes: 'hero-copy', [
-          span(classes: 'pill', [const Icon(AppIcon.sparkles, size: 14), .text(strings.heroPill)]),
+          span(classes: 'eyebrow', [.text(strings.heroPill)]),
           h1([
             .text(strings.heroTitleStart),
             span(classes: 'accent', [.text(strings.heroTitleAccent)]),
@@ -29,9 +29,14 @@ class Hero extends StatelessComponent {
             ]),
             a(href: context.anchor('features'), classes: 'button button-ghost', [.text(strings.heroSecondaryCta)]),
           ]),
-          ul(classes: 'hero-points', [
-            for (final point in strings.heroPoints) li([const Icon(AppIcon.check, size: 16), .text(point)]),
-          ]),
+        ]),
+        // The app's own scoreboard strip: a few honest numbers.
+        dl(classes: 'stat-strip', [
+          for (final (figure, label) in strings.heroStats)
+            div(classes: 'stat', [
+              dt([.text(label)]),
+              dd([.text(figure)]),
+            ]),
         ]),
         Screenshot('achievements', alt: strings.heroImageAlt, eager: true),
       ]),

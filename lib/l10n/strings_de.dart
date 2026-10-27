@@ -21,7 +21,7 @@ const stringsDe = Strings(
       'und Anerkennung unter Kollegen. Alles wird zu XP, Levels und Ranglisten – '
       'in einer Desktop-App, die Ihr Team gerne öffnet.',
   heroSecondaryCta: 'Funktionen entdecken',
-  heroPoints: ['macOS, Windows und Linux', 'In 5 Sprachen', 'Bereit für DSGVO-Anfragen'],
+  heroStats: [('3', 'Desktop-Systeme'), ('5', 'Sprachen'), ('4', 'Stufen verifizierter Erfolge'), ('0', 'Tabellen, die Sie von Hand pflegen')],
   heroImageAlt: 'Die Erfolgsübersicht: Sammelkarten mit XP, Level und verifizierten Abzeichen',
   typesEyebrow: 'Zwei Arten von Anerkennung',
   typesTitle: 'Das offizielle Siegel des Unternehmens, die Wertschätzung der Kollegen',
@@ -45,7 +45,7 @@ const stringsDe = Strings(
     'Eine gemeinsame Bibliothek, aus der das ganze Team schöpfen kann.',
   ],
   featuresEyebrow: 'Funktionen',
-  featuresTitle: 'Alles, was Sie brauchen, um gute Arbeit anzuerkennen',
+  featuresTitle: 'Alles, um „gute Arbeit“ richtig zu sagen',
   features: [
     (
       'Ranglisten und Levels',
@@ -95,7 +95,7 @@ const stringsDe = Strings(
   consoleInsightsAlt: 'Unternehmenskonsole: Auswertungen zur Anerkennung',
   consoleRequestsAlt: 'Unternehmenskonsole: Anfragen zur Freigabe',
   galleryEyebrow: 'Ein Blick in die App',
-  galleryTitle: 'Gemacht, um jeden Tag geöffnet zu werden',
+  galleryTitle: 'Gemacht, um jeden Tag geöffnet zu werden – nicht nur beim Jahresgespräch',
   galleryCaptions: [
     'Der Unternehmens-Feed mit Reaktionen und Kommentaren',
     'Die Details eines verifizierten Erfolgs',
@@ -157,7 +157,7 @@ const stringsDe = Strings(
     ),
   ],
   ctaTitle: 'Bringen Sie Scoreboard in Ihr Unternehmen',
-  ctaLead: 'Wir zeigen Ihnen die App mit den Daten eines echten Demo-Unternehmens und helfen Ihnen, Ihren ersten Katalog einzurichten.',
+  ctaLead: 'Wir zeigen Ihnen die App mit den Daten eines echten Demo-Unternehmens und helfen Ihnen, Ihren ersten Katalog einzurichten. Den Kaffee bringen Sie mit.',
   ctaDownload: 'App herunterladen',
   footerTagline: 'Anerkennung am Arbeitsplatz, für macOS, Windows und Linux.',
   footerDownload: 'Download',

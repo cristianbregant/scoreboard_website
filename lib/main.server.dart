@@ -19,13 +19,14 @@ void main() {
     Document(
       // Title, language and per-language tags are set by each page.
       base: Site.basePath,
-      meta: {'theme-color': '#111214', 'twitter:card': 'summary_large_image'},
+      meta: {'theme-color': '#0e0f11', 'twitter:card': 'summary_large_image'},
       head: [
         link(rel: 'icon', href: 'favicon.svg', type: 'image/svg+xml'),
         link(rel: 'preconnect', href: 'https://fonts.googleapis.com'),
         link(
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
+          // Inter for reading, Geist for display: the app's two typefaces.
+          href: 'https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=Inter:wght@400;500;600&display=swap',
         ),
         link(rel: 'stylesheet', href: 'styles.css'),
       ],

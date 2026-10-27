@@ -21,7 +21,7 @@ const stringsEn = Strings(
       'and into recognition between colleagues. It all adds up to XP, levels and leaderboards, '
       'in a desktop app your team will actually enjoy opening.',
   heroSecondaryCta: 'Explore the features',
-  heroPoints: ['macOS, Windows and Linux', 'In 5 languages', 'Ready for GDPR requests'],
+  heroStats: [('3', 'desktop platforms'), ('5', 'languages'), ('4', 'tiers of verified achievements'), ('0', 'spreadsheets to update by hand')],
   heroImageAlt: 'The achievements screen: collectible cards with XP, level and verified badges',
   typesEyebrow: 'Two kinds of recognition',
   typesTitle: 'The company’s official seal, your colleagues’ warmth',
@@ -45,7 +45,7 @@ const stringsEn = Strings(
     'A shared library the whole team can draw from.',
   ],
   featuresEyebrow: 'Features',
-  featuresTitle: 'Everything you need to recognize good work',
+  featuresTitle: 'Everything you need to say “nice work” properly',
   features: [
     (
       'Leaderboards and levels',
@@ -95,7 +95,7 @@ const stringsEn = Strings(
   consoleInsightsAlt: 'Company console: insights on recognition activity',
   consoleRequestsAlt: 'Company console: requests awaiting approval',
   galleryEyebrow: 'Inside the app',
-  galleryTitle: 'Designed to be opened every day',
+  galleryTitle: 'Designed to be opened every day, not just at review time',
   galleryCaptions: [
     'The company feed with reactions and comments',
     'The detail of a verified achievement',
@@ -157,7 +157,7 @@ const stringsEn = Strings(
     ),
   ],
   ctaTitle: 'Bring Scoreboard to your company',
-  ctaLead: 'We’ll show you the app with the data of a real demo company and help you set up your first catalog.',
+  ctaLead: 'We’ll show you the app with the data of a real demo company and help you set up your first catalog. Coffee’s on you.',
   ctaDownload: 'Download the app',
   footerTagline: 'Workplace recognition, for macOS, Windows and Linux.',
   footerDownload: 'Download',

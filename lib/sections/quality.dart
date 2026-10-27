@@ -18,11 +18,10 @@ class Quality extends StatelessComponent {
     return section(classes: 'section section-alt', [
       div(classes: 'container', [
         SectionTitle(eyebrow: strings.qualityEyebrow, title: strings.qualityTitle),
-        div(classes: 'quality-grid', [
+        div(classes: 'feature-grid', [
           for (final (i, (title, text)) in strings.qualityItems.indexed)
-            div(classes: 'quality-item', [
-              span(classes: 'icon-tile', [Icon(icons[i])]),
-              h3([.text(title)]),
+            div(classes: 'feature', [
+              h3([Icon(icons[i], size: 18), .text(title)]),
               p(classes: 'muted', [.text(text)]),
             ]),
         ]),

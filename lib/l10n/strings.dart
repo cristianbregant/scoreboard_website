@@ -16,7 +16,7 @@ class Strings {
     required this.heroTitleEnd,
     required this.heroLead,
     required this.heroSecondaryCta,
-    required this.heroPoints,
+    required this.heroStats,
     required this.heroImageAlt,
     required this.typesEyebrow,
     required this.typesTitle,
@@ -75,7 +75,8 @@ class Strings {
   final String heroTitleEnd;
   final String heroLead;
   final String heroSecondaryCta;
-  final List<String> heroPoints;
+  /// (figure, label), shown like a scoreboard under the hero.
+  final List<(String, String)> heroStats;
   final String heroImageAlt;
 
   final String typesEyebrow;

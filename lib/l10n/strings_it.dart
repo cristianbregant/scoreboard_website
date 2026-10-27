@@ -21,7 +21,7 @@ const stringsIt = Strings(
       'e in riconoscimenti tra colleghi. Tutto diventa XP, livelli e classifiche, '
       'in un’app desktop che il team apre volentieri.',
   heroSecondaryCta: 'Scopri le funzionalità',
-  heroPoints: ['macOS, Windows e Linux', 'In 5 lingue', 'Pronto per le richieste GDPR'],
+  heroStats: [('3', 'sistemi desktop'), ('5', 'lingue'), ('4', 'livelli di traguardi verificati'), ('0', 'fogli Excel da aggiornare a mano')],
   heroImageAlt: 'La schermata degli achievement: carte collezionabili con XP, livello e badge verificati',
   typesEyebrow: 'Due tipi di riconoscimento',
   typesTitle: 'Il valore ufficiale dell’azienda, il calore dei colleghi',
@@ -45,7 +45,7 @@ const stringsIt = Strings(
     'Una libreria condivisa da cui tutto il team può attingere.',
   ],
   featuresEyebrow: 'Funzionalità',
-  featuresTitle: 'Tutto quello che serve per riconoscere il lavoro ben fatto',
+  featuresTitle: 'Tutto quello che serve per dire «bel lavoro» come si deve',
   features: [
     (
       'Classifiche e livelli',
@@ -95,7 +95,7 @@ const stringsIt = Strings(
   consoleInsightsAlt: 'Console aziendale: insight sull’attività di riconoscimento',
   consoleRequestsAlt: 'Console aziendale: richieste da approvare',
   galleryEyebrow: 'Dentro l’app',
-  galleryTitle: 'Pensata per essere aperta ogni giorno',
+  galleryTitle: 'Pensata per essere aperta ogni giorno, non solo il giorno delle valutazioni',
   galleryCaptions: [
     'Il feed aziendale con reazioni e commenti',
     'Il dettaglio di un achievement verificato',
@@ -157,7 +157,7 @@ const stringsIt = Strings(
     ),
   ],
   ctaTitle: 'Porta Scoreboard nella tua azienda',
-  ctaLead: 'Ti mostriamo l’app con i dati di una vera azienda demo e ti aiutiamo a impostare il primo catalogo.',
+  ctaLead: 'Ti mostriamo l’app con i dati di una vera azienda demo e ti aiutiamo a impostare il primo catalogo. Il caffè lo porti tu.',
   ctaDownload: 'Scarica l’app',
   footerTagline: 'Riconoscimento sul lavoro, per macOS, Windows e Linux.',
   footerDownload: 'Download',

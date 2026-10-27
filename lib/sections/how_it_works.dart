@@ -16,7 +16,7 @@ class HowItWorks extends StatelessComponent {
         ol(classes: 'steps', [
           for (final (i, (title, text)) in strings.steps.indexed)
             li([
-              span(classes: 'step-number', [.text('${i + 1}')]),
+              span(classes: 'step-number', [.text('${i + 1}'.padLeft(2, '0'))]),
               h3([.text(title)]),
               p(classes: 'muted', [.text(text)]),
             ]),

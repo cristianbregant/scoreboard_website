@@ -3,7 +3,7 @@ import 'package:jaspr/jaspr.dart';
 
 /// Eyebrow, heading and lead paragraph that open a section.
 class SectionTitle extends StatelessComponent {
-  const SectionTitle({required this.eyebrow, required this.title, this.lead, this.centered = true, super.key});
+  const SectionTitle({required this.eyebrow, required this.title, this.lead, this.centered = false, super.key});
 
   final String eyebrow;
   final String title;

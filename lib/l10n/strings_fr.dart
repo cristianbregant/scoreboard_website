@@ -21,7 +21,7 @@ const stringsFr = Strings(
       'et en reconnaissance entre collègues. Tout se traduit en XP, niveaux et classements, '
       'dans une application de bureau que l’équipe ouvre avec plaisir.',
   heroSecondaryCta: 'Découvrir les fonctionnalités',
-  heroPoints: ['macOS, Windows et Linux', 'En 5 langues', 'Prêt pour les demandes RGPD'],
+  heroStats: [('3', 'systèmes desktop'), ('5', 'langues'), ('4', 'niveaux de succès vérifiés'), ('0', 'tableur à tenir à jour à la main')],
   heroImageAlt: 'L’écran des succès : des cartes à collectionner avec XP, niveau et badges vérifiés',
   typesEyebrow: 'Deux types de reconnaissance',
   typesTitle: 'La valeur officielle de l’entreprise, la chaleur des collègues',
@@ -45,7 +45,7 @@ const stringsFr = Strings(
     'Une bibliothèque partagée dans laquelle toute l’équipe peut puiser.',
   ],
   featuresEyebrow: 'Fonctionnalités',
-  featuresTitle: 'Tout ce qu’il faut pour reconnaître le travail bien fait',
+  featuresTitle: 'Tout ce qu’il faut pour dire « beau travail » comme il se doit',
   features: [
     (
       'Classements et niveaux',
@@ -95,7 +95,7 @@ const stringsFr = Strings(
   consoleInsightsAlt: 'Console de l’entreprise : statistiques sur la reconnaissance',
   consoleRequestsAlt: 'Console de l’entreprise : demandes à valider',
   galleryEyebrow: 'Dans l’application',
-  galleryTitle: 'Pensée pour être ouverte chaque jour',
+  galleryTitle: 'Pensée pour être ouverte chaque jour, pas seulement le jour de l’entretien annuel',
   galleryCaptions: [
     'Le fil de l’entreprise avec réactions et commentaires',
     'Le détail d’un succès vérifié',
@@ -157,7 +157,7 @@ const stringsFr = Strings(
     ),
   ],
   ctaTitle: 'Adoptez Scoreboard dans votre entreprise',
-  ctaLead: 'Nous vous montrons l’application avec les données d’une vraie entreprise de démonstration et vous aidons à créer votre premier catalogue.',
+  ctaLead: 'Nous vous montrons l’application avec les données d’une vraie entreprise de démonstration et vous aidons à créer votre premier catalogue. Le café, c’est pour vous.',
   ctaDownload: 'Télécharger l’application',
   footerTagline: 'La reconnaissance au travail, pour macOS, Windows et Linux.',
   footerDownload: 'Téléchargement',
