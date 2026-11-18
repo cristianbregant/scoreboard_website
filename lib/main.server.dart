@@ -22,12 +22,11 @@ void main() {
       meta: {'theme-color': '#0e0f11', 'twitter:card': 'summary_large_image'},
       head: [
         link(rel: 'icon', href: 'favicon.svg', type: 'image/svg+xml'),
-        link(rel: 'preconnect', href: 'https://fonts.googleapis.com'),
-        link(
-          rel: 'stylesheet',
-          // Inter for reading, Geist for display: the app's two typefaces.
-          href: 'https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=Inter:wght@400;500;600&display=swap',
-        ),
+        // Inter for reading, Geist for display: the app's two typefaces,
+        // served with the site (see styles.css). The above-the-fold ones
+        // load right away.
+        for (final font in ['Inter-Regular', 'Geist-SemiBold'])
+          link(rel: 'preload', href: 'fonts/$font.woff2', attributes: {'as': 'font', 'type': 'font/woff2', 'crossorigin': ''}),
         link(rel: 'stylesheet', href: 'styles.css'),
       ],
       body: const App(),

@@ -27,6 +27,8 @@ jaspr serve        # http://localhost:8080, reloads on changes
 jaspr build        # writes the site to build/jaspr
 ```
 
+`jaspr build` renders the pages through a server on port 8080. If another program already listens there, the build still succeeds but saves that program's page: pass a free port, e.g. `jaspr build --port 8099`.
+
 ## Publishing
 
 [.github/workflows/deploy.yml](.github/workflows/deploy.yml) builds the site and publishes it on GitHub Pages at every push to `main`, at `https://<owner>.github.io/<repo>/`. The workflow passes that address to the build as `SITE_URL`, which sets the base path of every link and the absolute URLs of the social previews.
@@ -54,8 +56,20 @@ lib/
 └── constants/site.dart
 web/
 ├── styles.css         every style, with the app's colors as variables
+├── fonts/             Inter and Geist, Latin subset as WOFF2, with their licenses
 ├── favicon.svg
 └── images/            screenshots of the app and the social preview
+```
+
+The fonts in `web/fonts` are served with the site rather than from Google Fonts, so no visitor's address goes to a third party (a GDPR concern, notably in Germany). They are a Latin subset of `scoreboard/assets/fonts`, made with fontTools:
+
+```sh
+pip install fonttools brotli
+for f in Inter-Regular Inter-Medium Inter-SemiBold Geist-Medium Geist-SemiBold Geist-Bold; do
+  pyftsubset "../scoreboard/assets/fonts/$f.ttf" --flavor=woff2 --output-file="web/fonts/$f.woff2" \
+    --layout-features='kern,liga,calt,ccmp,locl,mark,mkmk,tnum,case' \
+    --unicodes='U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2195,U+2212,U+2215,U+FEFF,U+FFFD'
+done
 ```
 
 The screenshots in `web/images/screens` are JPEG copies of `scoreboard/docs/images`, resized to 1600 px. After updating the app's screenshots, copy them again:

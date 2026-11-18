@@ -3,6 +3,52 @@
    Geist for display and Inter for reading. Interest comes from type,
    contrast and composition, not from glows or gradients. */
 
+/* Inter and Geist (SIL Open Font License, see fonts/*-OFL.txt), served
+   with the site instead of from Google Fonts: no visitor's address goes
+   to a third party. Latin subset of the app's own font files. */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Inter-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Inter-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Inter-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Geist-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Geist-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Geist-Bold.woff2') format('woff2');
+}
+
 :root {
   --bg: #0e0f11;
   --bg-alt: #131417;
