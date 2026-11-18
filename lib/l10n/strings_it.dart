@@ -31,7 +31,7 @@ const stringsIt = Strings(
   verifiedTitle: 'Achievement verificati',
   verifiedSubtitle: 'Assegnati solo dall’azienda',
   verifiedPoints: [
-    'Fino a 150 XP, in quattro livelli: Bronze, Silver, Gold e Platinum.',
+    'Da 50 a 200 XP, in quattro livelli: Bronze, Silver, Gold e Platinum.',
     'Il retro della carta mostra il logo dell’azienda, come un certificato.',
     'Si scaricano come PDF e come credenziale Open Badges 3.0.',
     'Si aggiungono al profilo LinkedIn tra le certificazioni.',
@@ -116,7 +116,7 @@ const stringsIt = Strings(
   qualityItems: [
     (
       'Nativa sul desktop',
-      'macOS, Windows e Linux, con icona nella barra dei menu, scorciatoie da tastiera e aggiornamenti automatici.',
+      'macOS, Windows e Linux, con icona nella barra dei menu, scorciatoie da tastiera e un avviso a ogni nuova versione.',
     ),
     ('In 5 lingue', 'Italiano, inglese, spagnolo, francese e tedesco, con temi chiaro e scuro.'),
     (
